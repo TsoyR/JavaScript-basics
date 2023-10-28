@@ -25,9 +25,9 @@
 
 const num = Number(prompt('Введите целое положительное число'));
 
-const hundred = Math.trunc(num / 100);
-const ten = Math.trunc((num - hundred * 100) / 10);
-const one = (num - hundred * 100) % 10;
+const hundred = Math.trunc(num / 100) % 100; // сотни
+const ten = Math.trunc(num / 10) % 10; //десятки
+const one = num % 10; //единицы
 console.log(
   `В числе ${num} количество сотен: ${hundred}, десятков: ${ten}, единиц: ${one}`
 );

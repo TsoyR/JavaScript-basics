@@ -13,11 +13,15 @@
 в консоль "Одно или более значений некорректно.".
 */
 
-
 const positive = Number.parseInt(prompt('Введите положительное число: '));
 const negative = Number.parseInt(prompt('Введите отрицательное число: '));
 
-if (positive != NaN && negative != NaN && positive >= 0 && negative < 0) {
+if (
+  positive != Number.isNaN &&
+  negative != Number.isNaN &&
+  positive > 0 &&
+  negative < 0
+) {
   console.log('Все значения верные.');
 } else {
   console.log('Одно или более значений некорректно.');
