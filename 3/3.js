@@ -14,16 +14,8 @@ const numberOne = Number(prompt('Введите первое число'));
 const numberTwo = Number(prompt('Введите второе число'));
 const numberThree = Number(prompt('Введите третье число'));
 
-let numberMax;
-
 function numMax(n1, n2, n3) {
-  if (n1 > n2 && n1 > n3) {
-    numberMax = n1;
-  } else if (n2 > n1 && n2 > n3) {
-    numberMax = n2;
-  } else {
-    numberMax = n3;
-  }
+  let numberMax = Math.max(n1, n2, n3);
   console.log(
     `Максимальное значение среди чисел ${n1}, ${n2}, ${n3} равно ${numberMax}.`
   );

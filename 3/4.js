@@ -27,16 +27,13 @@ console.log(sum(1, 2));
 function diff(a, b) {
   if (a > b) {
     return a - b;
-  } else if (b > a) {
-    return b - a;
-  } else {
-    return 0;
   }
+  return b - a;
 }
 
 console.log(diff(2, 2));
 
-function multiply(a, b){
+function multiply(a, b) {
   return a * b;
 }
 

@@ -13,12 +13,14 @@
 
 const userWage = Number(prompt('Введите число'));
 
-if (isNaN(userWage)) {
+if (!Number.isFinite(userWage)) {
   console.log('Значение задано неверно');
 } else {
   wageCalc(userWage);
 }
 function wageCalc(wage) {
-  const result = Math.trunc(wage - wage * 0.13);
-  console.log(`Размер заработной платы за вычетом налогов равен ${result}.`);
+  const result = wage - wage * 0.13;
+  console.log(
+    `Размер заработной платы за вычетом налогов равен ${result.toFixed(2)}.`
+  );
 }
